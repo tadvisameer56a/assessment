@@ -1,0 +1,47 @@
+<ion-view>
+  <ion-header-bar class="bar-calm">
+   <a class="button icon-left ion-chevron-left " ng-click="$ionicGoBack()" ><i class="icon ion-ios7-search placeholder-icon"></i></a>
+    <h1 class="title">#{{salesOrderID}}</h1>
+    
+  </ion-header-bar>
+
+
+  <ion-content  scroll="true">
+  
+  
+    <form name="joiningForm" novalidate="" ng-submit="joiningFormSubmit(join,joiningForm)">
+    <div class="list">
+     
+      <label class="item item-input validated row">
+        <span class="input-label col col-50">Sales Order #</span>
+        <input type="text" ng-model="detailData.documentNo" required="required" name="name" class="col col-50">
+       
+      </label>
+      <label class="item item-input validated row">
+        <span class="input-label col col-50">Customer Name</span>
+        <input type="tel" ng-model="detailData.rwsCustomer$_identifier" name="mobile" required="required" class="col col-50">
+       
+      </label>
+	  <label class="item item-input validated row">
+        <span class="input-label col col-50">Delivery Advise Date</span>
+        <input type="text" ng-model="detailData.scheduledDeliveryDate" name="sponserId" required="required" class="col col-50">
+       
+      </label>
+	  
+	  <label class="item item-input validated row">
+        <span class="input-label col col-50">Grand Total</span>
+        <input type="text" ng-model="detailData.grandTotalAmount" name="epin" required="required" class="col col-50">
+       
+      </label>
+    </div>
+    
+	
+	
+	
+	
+	
+    </form>
+  </ion-content>
+  
+  
+</ion-view>

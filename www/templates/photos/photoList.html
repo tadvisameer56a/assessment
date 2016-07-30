@@ -1,0 +1,16 @@
+<ion-view>
+      <ion-header-bar class="bar-calm">
+  
+    <h1 class="title">Photo Gallery</h1>
+     <a class="button icon-left ion-camera" style="border:none;" ng-click="addImage()" ></a>
+  </ion-header-bar>
+      <ion-content class="center">
+           <div class="row" ng-repeat="image in images">
+  <div class="col col-100" >
+               <img  ng-src="{{ImageUrl(image)}}" height="200px" width="100%"/>
+            </div>
+  
+</div>
+
+    </ion-content>
+    </ion-view>

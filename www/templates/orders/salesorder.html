@@ -1,0 +1,31 @@
+<ion-view>
+  <ion-header-bar class="bar-calm">
+   <a class="button icon-left ion-chevron-left " ng-click="$ionicGoBack()" ></a>
+    <h1 class="title">Sales Order</h1>
+    
+  </ion-header-bar>
+  
+ 
+        <ion-content >
+		
+		<div class="list">
+   
+
+   <div class="item item-icon-right" ng-repeat="solist in oList">
+   <a href="#/viewOrders/{{solist.documentNo}}" style="text-decoration:none;"> 
+      <i class="icon  ion-chevron-right"></i>
+     
+		   <h3 >{{solist.rwsCustomer$_identifier}}</h3><br/>
+		    <h4 >#{{solist.documentNo}}</h4>
+		    
+		   
+          </a>
+            
+   </div>
+
+   
+</div>
+  
+</ion-content>
+
+</ion-view>
