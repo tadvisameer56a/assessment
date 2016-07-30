@@ -26,12 +26,13 @@ angular.module('starter', ['ionic','ngStorage','ngMessages','ngCordova','starter
 
 .config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   $stateProvider
-  
+  //-------------------------------for home page routing--------------------
     .state('home', {
       url: '/home',
     templateUrl:'templates/home.html',
       
     })
+	//-------------------------------for photolist page routing--------------------
       .state('photos', {
       url: '/photos',
     templateUrl:'templates/photos/photoList.html',
@@ -39,20 +40,20 @@ angular.module('starter', ['ionic','ngStorage','ngMessages','ngCordova','starter
 	
      
     })
+	//-------------------------------for sales order page routing--------------------
     .state('orders', {
       url: '/orders',
       templateUrl: 'templates/orders/salesorder.html',
 	   controller: 'SalesOrderCtrl'
     })
+	//-------------------------------for sales order view page routing--------------------
 	 .state('viewOrders', {
       url: '/viewOrders/:id',
       templateUrl: 'templates/orders/detailsView.html',
 	   controller: 'detailsSalesOrderCtrl'
     })
 
-
-  
-  
+  //-------------------------------otherwise--------------------
   $urlRouterProvider.otherwise('/home');
  
 });

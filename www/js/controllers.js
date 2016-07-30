@@ -1,12 +1,12 @@
 angular.module('starter.controllers', [])
 
 .controller('imageController', function($scope, $cordovaCamera, $cordovaFile) {
-    // 1
+    
     $scope.images = [];
 
 
     $scope.addImage = function() {
-        // 2
+      
         var options = {
             destinationType : Camera.DestinationType.FILE_URI,
             sourceType : Camera.PictureSourceType.CAMERA, // Camera.PictureSourceType.PHOTOLIBRARY
@@ -15,10 +15,10 @@ angular.module('starter.controllers', [])
             popoverOptions: CameraPopoverOptions,
         };
 
-        // 3
+    
         $cordovaCamera.getPicture(options).then(function(imageData) {
 
-            // 4
+            // 
             onImageSuccess(imageData);
 
             function onImageSuccess(fileURI) {
@@ -71,7 +71,7 @@ angular.module('starter.controllers', [])
         });
     }
 
-    $scope ImageUrl = function(imageName) {
+    $scope.ImageUrl = function(imageName) {
         var name = imageName.substr(imageName.lastIndexOf('/') + 1);
         var trueOrigin = cordova.file.dataDirectory + name;
         return trueOrigin;

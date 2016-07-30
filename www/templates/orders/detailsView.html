@@ -1,6 +1,6 @@
 <ion-view>
-  <ion-header-bar class="bar-calm">
-   <a class="button icon-left ion-chevron-left " ng-click="$ionicGoBack()" ><i class="icon ion-ios7-search placeholder-icon"></i></a>
+  <ion-header-bar class="bar-positive">
+   <a class="button icon-left ion-chevron-left " style="border:none;" ng-click="$ionicGoBack()" ><i class="icon ion-ios7-search placeholder-icon"></i></a>
     <h1 class="title">#{{salesOrderID}}</h1>
     
   </ion-header-bar>
@@ -9,7 +9,7 @@
   <ion-content  scroll="true">
   
   
-    <form name="joiningForm" novalidate="" ng-submit="joiningFormSubmit(join,joiningForm)">
+    <form name="salesOrderForm" novalidate="" ng-submit="FormSubmit()">
     <div class="list">
      
       <label class="item item-input validated row">
